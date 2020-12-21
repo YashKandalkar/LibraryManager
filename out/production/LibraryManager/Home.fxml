@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="490.0" prefWidth="600.0" style="-fx-background-color: #202124;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.HomeController">
+   <AnchorPane prefHeight="52.0" prefWidth="600.0" style="-fx-background-color: #333;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label layoutX="14.0" layoutY="11.0" text="Library Manager" textFill="#ffb200" AnchorPane.leftAnchor="24.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Button layoutX="528.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #abc;" text="Logout" AnchorPane.rightAnchor="24.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </AnchorPane>
+   <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="200.0" layoutY="52.0" maxHeight="440.0" prefHeight="440.0" prefWidth="600.0" style="-fx-background-color: #202124;" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="588.0" style="-fx-background-color: #202124;">
+         <BorderPane layoutX="7.0" layoutY="7.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0">
+            <center>
+               <AnchorPane maxHeight="100.0" maxWidth="700.0" minHeight="150.0" prefHeight="100.0" prefWidth="553.0" style="-fx-background-color: #333; -fx-background-radius: 8; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="51.0" layoutY="14.0" prefHeight="52.0" prefWidth="451.0" text="Datta Meghe College of Engineering" textAlignment="CENTER" textFill="#ededed" AnchorPane.bottomAnchor="84.0" AnchorPane.leftAnchor="51.0" AnchorPane.rightAnchor="51.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="totalBooks" alignment="CENTER" contentDisplay="CENTER" layoutX="206.0" layoutY="98.0" prefHeight="25.0" prefWidth="141.0" text="Total Books: 1200" textAlignment="CENTER" textFill="#eeeeee" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="206.0" AnchorPane.rightAnchor="206.0" AnchorPane.topAnchor="98.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </AnchorPane>
+            </center>
+         </BorderPane>
+         <BorderPane layoutX="7.0" layoutY="191.0" style="-fx-background-color: #242424;" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="200.0">
+            <center>
+               <AnchorPane maxWidth="700.0" prefWidth="553.0" style="-fx-background-color: #484848; -fx-background-radius: 8; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);;">
+                  <AnchorPane prefHeight="41.0" prefWidth="554.0" style="-fx-background-color: #cf9104;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <Label layoutX="14.0" layoutY="7.0" text="Books" textFill="#eeeeee" AnchorPane.leftAnchor="14.0">
+                        <font>
+                           <Font size="18.0" />
+                        </font>
+                     </Label>
+                     <TextField layoutX="88.0" layoutY="8.0" promptText="Search for a book" style="-fx-background-color: #eee;" AnchorPane.leftAnchor="88.0" AnchorPane.topAnchor="8.0" />
+                     <Button layoutX="501.0" layoutY="8.0" mnemonicParsing="false" onAction="#onAddPress" style="-fx-background-color: #abc;" text="Add" AnchorPane.rightAnchor="14.0">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font>
+                        <cursor>
+                           <Cursor fx:constant="HAND" />
+                        </cursor>
+                     </Button>
+                     <ComboBox layoutX="326.0" layoutY="8.0" prefWidth="150.0" promptText="Sort By:" AnchorPane.rightAnchor="77.0">
+                        <cursor>
+                           <Cursor fx:constant="HAND" />
+                        </cursor>
+                     </ComboBox>
+                  </AnchorPane>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" layoutY="41.0" maxHeight="-Infinity" prefHeight="380.0" style="-fx-background-color: #242424;" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="41.0">
+                     <VBox fx:id="booksContainer" prefWidth="556.0" spacing="16.0" style="-fx-background-color: #242424;">
+                        <padding>
+                           <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                        </padding>
+                     </VBox>
+                  </ScrollPane>
+               </AnchorPane>
+            </center>
+         </BorderPane>
+      </AnchorPane>
+   </ScrollPane>
+</AnchorPane>
